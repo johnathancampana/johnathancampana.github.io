@@ -25,6 +25,22 @@
     text-align: center;
 }
 
-#links {
-    text-align: center;
+#link-menu {
+    display: flex;
+    flex-direction: row;
+    width: 99%;
+    justify-content: flex-end;
 }
+
+.link, .link a:visited {
+    font-size: 15px;
+    margin-right: 20px;
+    font-weight: 600;
+  }
+  
+  .link a {
+    color: black;
+    padding-bottom: 0px;
+    text-decoration: none;
+    border-bottom: 3px solid cornflowerblue;
+  }
