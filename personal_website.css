@@ -1,3 +1,7 @@
+body {
+    margin: 2em;
+}
+
 #pic {
     display: block;
     margin-left: auto;
@@ -10,7 +14,7 @@
 }
 
 #about {
-    text-align: center;
+    text-align: left;
 }
 
 .workItem {
@@ -18,11 +22,6 @@
     width: 90%;
     display: inline-grid;
     grid-template-columns: auto auto
-}
-
-#experience {
-    display: flex;
-    text-align: center;
 }
 
 #link-menu {
@@ -44,3 +43,4 @@
     text-decoration: none;
     border-bottom: 3px solid cornflowerblue;
   }
+
