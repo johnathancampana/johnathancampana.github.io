@@ -1,43 +1,154 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <link rel="stylesheet" href="personal_website.css">
-        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-        <link rel="stylesheet" href="https://use.typekit.net/pxb3ypb.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
-    </head>
-    <body>
 
-        <div id="link-menu">
-            <div class="link"><a href="">about</a></div>
-            <div class="link"><a href="">projects</a></div>
-            <div class="link"><a target="_blank" href="Resume.pdf">resume</a></div>
-            <a class="link" href="mailto:jcampana@umass.edu"><i style="font-size: 14px; margin-top: 4px; color: black;" class="fas fa-envelope"></i></a>
-            <a class="link" target="_blank" href="https://github.com/johnathancampana"><i style="font-size: 14px; margin-top: 4px; color: black;" class="fab fa-github"></i></a>
-            <a class="link" target="_blank" href="https://www.linkedin.com/in/johnathan-campana-345ba9154/"><i style="font-size: 14px; margin-top: 4px; color: black;" class="fab fa-linkedin"></i></a>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+        integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="link-menu">
+        <div class="link"><a href="#about">about</a></div>
+        <div class="link"><a href="#projects">projects</a></div>
+        <div class="link"><a target="_blank" href="Resume.pdf">resume</a></div>
+        <a class="link" href="mailto:jcampana@umass.edu"><i style="font-size: 14px; margin-top: 4px; color: black;"
+                class="fas fa-envelope"></i></a>
+        <!--<a class="link" target="_blank" href="https://github.com/johnathancampana"><i
+                style="font-size: 14px; margin-top: 4px; color: black;" class="fab fa-github"></i></a> -->
+        <a class="link" target="_blank" href="https://www.linkedin.com/in/johnathan-campana-345ba9154/"><i
+                style="font-size: 14px; margin-top: 4px; color: black;" class="fab fa-linkedin"></i></a>
+    </div>
+
+    <div id="about">
+        <h1 id="name">Hi, I'm John!</h1>
+        <p>
+            I'm currently finishing up a computer science degree at the University of Massachusetts, Amherst. When I
+            graduate, I am hoping to work as a software engineer. I also like <a href="#extracurricular">rowing</a>,
+            travelling, and hiking.
+        </p>
+    </div>
+
+    <div id="experience">
+        <a href="#projects">
+            <h2>Checkout some of the cool stuff I've been working on</h2>
+        </a>
+    </div>
+
+    <div id="projects">
+        <h2>Projects</h2>
+
+        <div class="project-item">
+            <h3>Viasat Command Line Interface</h3>
+            <p>
+                In my last summer of college, I was invited to join a team at <a href="https://www.viasat.com/"
+                    target="_blank">Viasat</a>
+                where I built an internal tool. This was another unique
+                oppurtuntunity where I was able to see a project all the way through its lifecycle. This time, I was
+                working with another intern which was a great experience in itself. At Viasat, I learned the ins and
+                outs of Clojure, remote work, and developing software in an Agile environment.
+            </p>
+            <p>
+                I began the summer <a href="https://www.braveclojure.com/clojure-for-the-brave-and-true/"
+                    target="_blank">learning
+                </a>about <a href="https://clojure.org/" target="_blank">Clojure</a>, a functional programming language
+                and dialect of
+                Lisp. While I had done some functional programming in Javascript, learning Clojure was certainly a
+                paradigm shift. By the end of the summer, we had used it to build a command line tool for viewing and
+                editting the contents of a heirarchical namespace, as well as <a
+                    href="http://mally.stanford.edu/~sr/computing/basic-unix.html" target="_blank"
+                    title="Well, not quite all of those!">navigating it like a filesystem</a>. Although we took on most
+                of the CLI work ourselves, my fellow intern and I were a part of a larger <a
+                    href="https://agilemanifesto.org/">Agile</a> team.
+            </p>
+            <p>
+                After a couple days of learning Clojure and getting set up to work remotely, our project began with a
+                breakdown of an epic. With our manager, we reviewed the expectations of the project and broke down the
+                work into smaller, pointed stories. Each sprint, we took on a few stories and within the two weeks,
+                submitted all of our code, responded to code reviews, and gave demos to a product owner. Because I was
+                working on a team, and our project was bundled into a larger repository, my ability to use git improved
+                dramatically. My manager introduced me to a tool called <a href="https://www.syntevo.com/smartgit/"
+                    target="_blank">SmartGit</a>, which was a lifesaver. I still marvel at the
+                fact that we were able to work so smoothly as a team, despite working remotely.
+            </p>
+            <p>
+                Like many others, the COVID-19 pandemic forced us at Viasat to work from home. Over the course of the
+                summer, I got better at communicating online effectively,
+                drawing the line between work and leisure, and managing my time. Overall, I was surprised at how little
+                being remote affected my ability to learn from peers and work efficiently.
+            </p>
+            <p>
+                I really enjoyed my summer at Viasat despite the atypical circumstance. The folks that were using the
+                tool we built really appreciate our efforts and emphasized how it would make their jobs a great deal
+                easier.
+            </p>
         </div>
 
-        <div>
-            <h1 id="name">Hi, I'm John!</h1>
+        <div class="project-item">
+            <h3>Lean In HUB</h3>
+            <img class="lean-in-app" src="images/LeanIn_Home.PNG" alt="Lean In Hub Homepage"
+                style="width:375px;height:667px;">
+            <img class="lean-in-app" src="images/LeanIn_Social.PNG" alt="Lean In Hub Homepage"
+                style="width:375px;height:667px;">
+            <p>
+                During the fall of my junior year, I was lucky enough to spend a semester abroad in Barcelona working
+                with some great
+                folks over at <a href="https://www.dribba.com/" target="_blank">Dribba</a>. My time at Dribba was
+                dedicated to building
+                an app for
+                <a href="https://leanin.org/" target="_blank">Lean In</a>. Despite not having any experience building
+                mobile apps, I was
+                able to get
+                the hang of it using <a href="https://flutter.dev/Flutter" target="_blank">Flutter</a>, a toolkit from
+                Google that uses
+                the Dart programming
+                language. The app debuted at the 2019 Lean In Conference in the Netherlands.
+            </p>
+            <p>
+                Aside from spending an unforgettable semester in Barcelona, I also took away quite a bit from my time at
+                Dribba. I learned a new programming language, got to work with people around the globe, and built my
+                first mobile app! Even
+                going in to my third year as a computer science major building an app almost entirely from scratch
+                sounded daunting to me.
+                But after a few weeks on the job, some help from my colleagues at Dribba, and countless Google searches,
+                I got used to the
+                process. I loved working on a small project where I could see the changes I was making instantly
+                reflected in the UI and behavior of the app. It was the first time I had built something that people
+                would actually use and that felt pretty great!
+            </p>
+            <p>
+                If you're interested in learning more about the app, check it out on the <a
+                    href="https://apps.apple.com/us/app/lean-in-hub/id1485791631" target="_blank">App Store</a> or the
+                <a href="https://play.google.com/store/apps/details?id=ch.dribba.cilantro.leanin" target="_blank">Google
+                    Play
+                    Store</a>!
+            </p>
         </div>
+    </div>
 
-        <div id="portrait">
-            <img id="pic" src="ontheQ.png" alt="me">
-        </div>
+    <div id="extracurricular">
+        <h2>Other stuff</h2>
+        <h3>Rowing</h3>
+        <p>
+            When I first arrived at UMass, I knew I wanted to get involved in some sort of sport or club. Luckily for
+            me, some guys from the crew team stopped me on my way in to the dining hall and gave me their pitch. A few
+            years later I can confidentally say that hearing them out was one of the best decisions I've made. Rowing is
+            an incredible sport, but luckily for me their are far better writers that uncover  <a
+                href="https://www.amazon.com/Boys-Boat-Americans-Berlin-Olympics/dp/0143125478">the uncelebrated sport's beauty</a>.
+            On a personal level, there are a few ways I think joining the rowing team has impacted me.
+        </p>
+        <p>
+            In my few years as a UMass <a href="https://www.umrowing.com/history/#block-1916297e8d0d68b7418b"
+                target="_blank">Aggie</a>, I have given up most of my free time, put my body through pain regularly, and
+            DONE ONE OTHER THING. However, none of that even comes close to the joy I have found working with my
+            teammates and coaches towards a common goal, pushing myself to find new limits, and dedicating so much
+            time to something bigger than myself. And on top of all of that, I've developed a brotherly bond with some
+            of the best friends I could ask for.
+        </p>
+    </div>
 
-        <div id="about">
-            <p>Hi, my name is Johnathan Campana. I'm currently finishing up a computer science degree at the University
-                of Massachusetts, Amherst.</p>
-        </div>
+</body>
 
-        <div id="experience">
-            <a href="experience.html"><h2>Checkout some of the cool stuff I've been working on</h2></div></a>
-        </div>
-
-        <div id="links">
-            <a href="stuff.html"><h2>Here are some of my favorite books, essays and videos</h2></a>
-        </div>
-        
-    </body>
 </html>
