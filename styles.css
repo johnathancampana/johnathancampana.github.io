@@ -1,62 +1,65 @@
 body {
-    margin: 2em;
-    line-height: 1.5;
-    background-color: rgb(169, 203, 236);
-    color: rgb(30, 30, 30)
+  background-color: rgb(223, 237, 245);
+  margin: 2em;
+  line-height: 1.5;
+  color: rgb(30, 30, 30)
 }
 
 #about {
-    text-align: left;
-    width: 40%;
+  text-align: left;
+  width: 40%;
+  position: absolute;
+}
+
+#projects {
+  text-align: left;
+  position: absolute;
 }
 
 .item {
-    width: 100%;
+  width: 100%;
 }
 
 .container {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .container>div{
-    flex: 0 30%;
+  flex: 0 30%;
 }
 
 .workItem {
-    display: block;
-    width: 90%;
-    display: inline-grid;
-    grid-template-columns: auto auto
+  display: block;
+  width: 90%;
+  display: inline-grid;
+  grid-template-columns: auto auto
 }
 
 #link-menu {
-    display: flex;
-    flex-direction: row;
-    width: 99%;
-    justify-content: flex-end;
+  display: flex;
+  flex-direction: row;
+  width: 99%;
+  justify-content: flex-end;
+  position: absolute;
+  z-index:9999999;
 }
 
 .link, .link a:visited {
-    font-size: 18px;
-    margin-right: 20px;
-  }
+  font-size: 18px;
+  margin-right: 20px;
+}
   
-  .link a {
-    color: black;
-    text-decoration: none;
-  }
+.link a {
+  color: black;
+  text-decoration: none;
+}
 
-  .project-item {
-    padding-bottom: 5%;
-  }
+.project-item {
+  padding-bottom: 5%;
+}
 
-  #experience {
-    padding-top: 3%;
-    padding-bottom: 3%
-  }
-
-  .lean-in-app {
-    padding-right: 3%
-  }
+.lean-in-app {
+  padding-right: 3%
+}
 
