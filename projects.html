@@ -8,99 +8,96 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 </head>
 
+<div id="link-menu">
+    <div class="link"><a href="index.html">About</a></div>
+    <div class="link"><a href="projects.html">Projects</a></div>
+    <div class="link"><a href="writing.html">Writing</a></div>
+    <div class="link"><a target="_blank" href="Resume.pdf">Resume</a></div>
+    <a class="link" href="mailto:jcampana@umass.edu"><i style="font-size: 14px; margin-top: 4px; color: black;" class="fas fa-envelope"></i></a>
+    <a class="link" target="_blank" href="https://www.linkedin.com/in/johnathan-campana-345ba9154/"><i style="font-size: 14px; margin-top: 4px; color: black;" class="fab fa-linkedin"></i></a>
+</div>
+
 <body>
-    <div id="link-menu">
-        <div class="link"><a href="index.html">about</a></div>
-        <div class="link"><a href="projects.html">projects</a></div>
-        <div class="link"><a href="writing.html">writing</a></div>
-        <div class="link"><a target="_blank" href="Resume.pdf">resume</a></div>
-        <a class="link" href="mailto:jcampana@umass.edu"><i style="font-size: 14px; margin-top: 4px; color: black;" class="fas fa-envelope"></i></a>
-        <a class="link" target="_blank" href="https://www.linkedin.com/in/johnathan-campana-345ba9154/"><i style="font-size: 14px; margin-top: 4px; color: black;" class="fab fa-linkedin"></i></a>
-    </div>
+    <div class="container">
+        <div id="projects">
+            <h1>Projects</h1>
 
-    <div id="projects">
-        <h1>Projects</h1>
+            <div class="project-item" id="Viasat">
+                <h2>Viasat Command Line Interface</h2>
+                <p>
+                    In my last summer of college, I was invited to join a team at <a href="https://www.viasat.com/"
+                        target="_blank">Viasat</a>
+                    where I built an internal tool. This was a unique
+                    oppurtuntunity where I was able to see a project all the way through its lifecycle. It was also my first
+                    time working with another intern which was a great experience. At Viasat, I learned the ins and
+                    outs of Clojure, remote work, and developing software in an Agile environment.
+                </p>
+                <p>
+                    I began the summer <a href="https://www.braveclojure.com/clojure-for-the-brave-and-true/"
+                        target="_blank">learning
+                    </a>about <a href="https://clojure.org/" target="_blank">Clojure</a>, a functional programming language
+                    and dialect of
+                    Lisp. While I had done some functional programming in Javascript, learning Clojure was certainly a
+                    paradigm shift. By the end of the summer, I used it to build a command line tool for viewing and
+                    editting the contents of a heirarchical namespace, as well as <a
+                        href="http://mally.stanford.edu/~sr/computing/basic-unix.html" target="_blank"
+                        title="Well, not quite all of those!">navigating the namespace like a filesystem</a>. Although we took on most
+                    of the CLI work ourselves, my fellow intern and I were a part of a larger <a
+                        href="https://agilemanifesto.org/">Agile</a> team.
+                </p>
+                <p>
+                    After a couple days of learning Clojure and getting set up to work remotely, our project began with a
+                    breakdown of an epic. With our manager, we reviewed the expectations of the project and broke down the
+                    work into smaller, pointed stories. Each sprint, we took on a few stories and within the two weeks,
+                    submitted all of our code, responded to code reviews, and gave demos to a product owner. Because I was
+                    working on a team, and our project was bundled into a larger repository, my ability to use git improved
+                    dramatically. My manager introduced me to a tool called <a href="https://www.syntevo.com/smartgit/"
+                        target="_blank">SmartGit</a>, which was a lifesaver. In addition to learning quite a bit about Clojure and Git, I was also able to get used to effectively working from home.
+                </p>
+                <p>
+                    Like many others, the COVID-19 pandemic forced us at Viasat to work remotely. Over the course of the
+                    summer, I got better at communicating online effectively,
+                    drawing the line between work and leisure, and managing my time.
+                </p>
+                <p>
+                    I really enjoyed my summer at Viasat despite the atypical circumstance. The folks that were using the
+                    tool we built really appreciated our efforts and emphasized how it would not only save them time, but also providing a visual aid for a complex system.
+                </p>
+            </div>
 
-        <div class="project-item">
-            <h2>Viasat Command Line Interface</h2>
-            <p>
-                In my last summer of college, I was invited to join a team at <a href="https://www.viasat.com/"
-                    target="_blank">Viasat</a>
-                where I built an internal tool. This was a unique
-                oppurtuntunity where I was able to see a project all the way through its lifecycle. It was also my first
-                time working with another intern which was a great experience. At Viasat, I learned the ins and
-                outs of Clojure, remote work, and developing software in an Agile environment.
-            </p>
-            <p>
-                I began the summer <a href="https://www.braveclojure.com/clojure-for-the-brave-and-true/"
-                    target="_blank">learning
-                </a>about <a href="https://clojure.org/" target="_blank">Clojure</a>, a functional programming language
-                and dialect of
-                Lisp. While I had done some functional programming in Javascript, learning Clojure was certainly a
-                paradigm shift. By the end of the summer, we had used it to build a command line tool for viewing and
-                editting the contents of a heirarchical namespace, as well as <a
-                    href="http://mally.stanford.edu/~sr/computing/basic-unix.html" target="_blank"
-                    title="Well, not quite all of those!">navigating it like a filesystem</a>. Although we took on most
-                of the CLI work ourselves, my fellow intern and I were a part of a larger <a
-                    href="https://agilemanifesto.org/">Agile</a> team.
-            </p>
-            <p>
-                After a couple days of learning Clojure and getting set up to work remotely, our project began with a
-                breakdown of an epic. With our manager, we reviewed the expectations of the project and broke down the
-                work into smaller, pointed stories. Each sprint, we took on a few stories and within the two weeks,
-                submitted all of our code, responded to code reviews, and gave demos to a product owner. Because I was
-                working on a team, and our project was bundled into a larger repository, my ability to use git improved
-                dramatically. My manager introduced me to a tool called <a href="https://www.syntevo.com/smartgit/"
-                    target="_blank">SmartGit</a>, which was a lifesaver. I still marvel at the
-                fact that we were able to work so smoothly as a team, despite working remotely.
-            </p>
-            <p>
-                Like many others, the COVID-19 pandemic forced us at Viasat to work from home. Over the course of the
-                summer, I got better at communicating online effectively,
-                drawing the line between work and leisure, and managing my time.
-            </p>
-            <p>
-                I really enjoyed my summer at Viasat despite the atypical circumstance. The folks that were using the
-                tool we built really appreciated our efforts and emphasized how it would make their jobs a great deal
-                easier.
-            </p>
-        </div>
-
-        <div class="project-item">
-            <h2>Lean In HUB</h2>
-            <img class="lean-in-app" src="images/LeanIn_Home.PNG" alt="Lean In Hub Homepage"
-                style="width:375px;height:667px;">
-            <img class="lean-in-app" src="images/LeanIn_Social.PNG" alt="Lean In Hub Homepage"
-                style="width:375px;height:667px;">
-            <p>
-                During the fall of my junior year, I was lucky enough to spend a semester abroad in Barcelona working
-                with some great folks over at <a href="https://www.dribba.com/" target="_blank">Dribba</a>. My time at
-                Dribba was
-                dedicated to building an app for <a href="https://leanin.org/" target="_blank">Lean In</a>. Despite not
-                having any experience building
-                mobile apps, I was able to get the hang of it using <a href="https://flutter.dev/Flutter"
-                    target="_blank">Flutter</a>, a toolkit from
-                Google that uses the Dart programming language. The app debuted at the 2019 Lean In Conference in the
-                Netherlands.
-            </p>
-            <p>
-                Aside from spending an unforgettable semester in Barcelona, I also took away quite a bit from my time at
-                Dribba. I learned a new programming language, got to work with people around the globe, and built my
-                first mobile app! Even going in to my third year as a computer science major building an app almost
-                entirely from scratch
-                sounded daunting to me. But after a few weeks on the job, some help from my colleagues at Dribba, and
-                countless Google searches,
-                I got used to the process. I loved working on a small project where I could see the changes I was making
-                instantly
-                reflected in the UI and behavior of the app. It was the first time I had built something that people
-                would actually use and that felt pretty great!
-            </p>
-            <p>
-                If you're interested in learning more about the app, check it out on the <a
-                    href="https://apps.apple.com/us/app/lean-in-hub/id1485791631" target="_blank">App Store</a> or the
-                <a href="https://play.google.com/store/apps/details?id=ch.dribba.cilantro.leanin" target="_blank">Google
-                    Play Store</a>!
-            </p>
+            <div class="project-item" id="LeanIn">
+                <h2>Lean In HUB</h2>
+                <img class="lean-in-app" src="images/LeanIn_Home.PNG" alt="Lean In Hub Homepage"
+                    style="width:375px;height:667px;">
+                <img class="lean-in-app" src="images/LeanIn_Social.PNG" alt="Lean In Hub Homepage"
+                    style="width:375px;height:667px;">
+                <p>
+                    During the fall of my junior year, I was lucky enough to spend a semester abroad in Barcelona working
+                    with some great folks over at <a href="https://www.dribba.com/" target="_blank">Dribba</a>. My time at
+                    Dribba was
+                    dedicated to building an app for <a href="https://leanin.org/" target="_blank">Lean In</a>. Despite not
+                    having any experience building
+                    mobile apps, I was able to get the hang of it using <a href="https://flutter.dev/Flutter"
+                        target="_blank">Flutter</a>, a toolkit from
+                    Google that uses the Dart programming language. The app debuted at the 2019 Lean In Conference in the
+                    Netherlands with 350+ downloads.
+                </p>
+                <p>
+                    Aside from spending an unforgettable semester in Barcelona, I also took away quite a bit from my time at
+                    Dribba. I learned a new programming language, got to work with people around the globe, and built my
+                    first mobile app! Even going in to my third year as a computer science major, being asked to build an app almost
+                    entirely from scratch was a daunting task. Yet, after a few weeks on the job, some help from my colleagues at Dribba, and
+                    countless Google searches I got used to the process. I loved working on a small project where I could see the changes I was making
+                    instantly reflected in the UI and behavior of the app. It was the first time I had built something that people
+                    would actually use and that felt pretty great!
+                </p>
+                <p>
+                    If you're interested in learning more about the app, check it out on the <a
+                        href="https://apps.apple.com/us/app/lean-in-hub/id1485791631" target="_blank">App Store</a> or the
+                    <a href="https://play.google.com/store/apps/details?id=ch.dribba.cilantro.leanin" target="_blank">Google
+                        Play Store</a>!
+                </p>
+            </div>
         </div>
     </div>
 </body>
