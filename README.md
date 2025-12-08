@@ -1,0 +1,210 @@
+# Personal Site
+
+This repo powers a small content-focused site built with Vite + React. All of the text content lives in Markdown/JSON files so it can be updated without touching component code.
+
+## Tech Stack
+
+- **Framework**: React 19.1.0
+- **Build Tool**: Vite 7.0.4
+- **Markdown Rendering**: react-markdown 10.1.0
+- **Linting**: ESLint 9.30.1
+
+## Development
+
+### Setup
+
+```bash
+npm install
+npm run dev
+```
+
+The site will be available at `http://localhost:5173` (or the next available port).
+
+### Available Scripts
+
+- `npm run dev` - Start development server with hot module replacement
+- `npm run build` - Build for production (outputs to `dist/`)
+- `npm run preview` - Preview production build locally
+- `npm run lint` - Run ESLint to check code quality
+
+## Production Build
+
+### Building for Production
+
+```bash
+npm run build
+```
+
+This creates an optimized production build in the `dist/` directory. The build includes:
+- Minified JavaScript and CSS
+- Optimized assets
+- Tree-shaken dependencies
+
+### Previewing Production Build
+
+Before deploying, preview the production build locally:
+
+```bash
+npm run build
+npm run preview
+```
+
+### Deployment
+
+The `dist/` folder contains all static files needed to serve the site. You can deploy to any static hosting service:
+
+**Common hosting options:**
+- **Vercel**: Connect your GitHub repo and deploy automatically
+- **Netlify**: Drag and drop the `dist/` folder or connect via Git
+- **GitHub Pages**: Push `dist/` contents to `gh-pages` branch
+- **AWS S3 + CloudFront**: Upload `dist/` to an S3 bucket and configure CloudFront
+- **Any static host**: Upload contents of `dist/` to your web server
+
+**Important deployment notes:**
+- Ensure your hosting service supports client-side routing (SPA mode)
+- For Vercel/Netlify, you may need a `_redirects` or `vercel.json` file to handle client-side routing
+- The site uses hash-based routing (`#about`, `#projects`, etc.), so no special server configuration is needed
+
+## Project Structure
+
+```
+personal-site/
+├── public/
+│   ├── content/          # JSON data files
+│   │   ├── projects.json # Project entries
+│   │   └── reviews.json  # Review entries
+│   ├── projects/         # Project detail pages (HTML + Markdown)
+│   ├── reviews/          # Review detail pages (HTML + Markdown)
+│   └── writing/          # Writing detail pages (HTML + Markdown)
+├── src/
+│   ├── content/          # Main content Markdown files
+│   │   ├── about.md      # Bio/about section
+│   │   ├── projects.md   # Projects section intro
+│   │   └── writing.md    # Writing section content
+│   ├── App.jsx           # Main React component
+│   ├── App.css           # Component styles
+│   ├── main.jsx          # React entry point
+│   └── index.css         # Global styles
+├── index.html            # HTML template
+├── vite.config.js        # Vite configuration
+└── package.json          # Dependencies and scripts
+```
+
+## Content Management
+
+### Updating Bio/About Section
+
+Edit `src/content/about.md` directly. Changes will appear immediately in development and after rebuilding for production.
+
+### Adding Projects
+
+1. **Add entry to JSON**: Append a new object to `public/content/projects.json` with:
+   - `title` - Project/work title
+   - `slug` - URL-friendly identifier (used in filename)
+   - `role` - Your role (e.g., "Tech Lead", "Product Manager")
+   - `company` - Company name
+   - `type` - Project type/category
+   - `skills` - Array of relevant skills
+   - `summary` - Short description shown on card
+   - `date` - Date in YYYY-MM-DD format
+
+2. **Create detail page**:
+   - Add Markdown: `public/projects/<slug>.md`
+   - Copy `public/projects/template.html` → `public/projects/<slug>.html`
+   - Update the `markdownFile` variable in the HTML to point to your `.md` file
+
+3. **Update intro** (optional): Edit `src/content/projects.md` to change the Projects section introduction
+
+### Adding Reviews
+
+1. **Add entry to JSON**: Append a new object to `public/content/reviews.json` with:
+   - `title` - Review title
+   - `type` - One of: `book`, `movie`, `article`
+   - `rating` - Number 0-5 (supports decimals like 4.5)
+   - `image` - URL to cover image
+   - `slug` - URL-friendly identifier
+   - `blurb` - Short description shown on hover
+   - `dateCompleted` - Date in YYYY-MM-DD format
+
+2. **Create detail page**:
+   - Add Markdown: `public/reviews/<slug>.md`
+   - Copy `public/reviews/template.html` → `public/reviews/<slug>.html`
+   - Update the `markdownFile` variable in the HTML to point to your `.md` file
+
+The Reviews tab will automatically show the new card with filters, rating stars, and hover effects.
+
+### Adding Writing Pieces
+
+1. **Add Markdown file**: `public/writing/<slug>.md`
+
+2. **Create HTML page**:
+   - Copy `public/writing/template.html` → `public/writing/<slug>.html`
+   - Update the `markdownFile` variable to point to your new `.md` file
+
+3. **Add link**: Edit `src/content/writing.md` and add a link to `/writing/<slug>.html`
+
+## Maintenance
+
+### Updating Dependencies
+
+Periodically update dependencies to get security patches and new features:
+
+```bash
+npm outdated          # Check for outdated packages
+npm update            # Update to latest versions within semver ranges
+npm audit             # Check for security vulnerabilities
+npm audit fix         # Automatically fix vulnerabilities
+```
+
+### Code Quality
+
+Run the linter before committing:
+
+```bash
+npm run lint
+```
+
+### Troubleshooting
+
+**Build fails:**
+- Clear `node_modules` and reinstall: `rm -rf node_modules package-lock.json && npm install`
+- Check Node.js version (Vite 7 requires Node 18+)
+
+**Content not updating:**
+- Hard refresh browser (Cmd+Shift+R / Ctrl+Shift+R)
+- Clear browser cache
+- Rebuild: `npm run build`
+
+**Routing issues:**
+- The site uses hash-based routing (`#about`, `#projects`), so no server configuration needed
+- If deploying to a service that doesn't support SPAs, ensure hash routing is working
+
+**Markdown not rendering:**
+- Check that file paths in HTML templates are correct
+- Verify Markdown files are in the correct directories
+- Check browser console for 404 errors
+
+### Performance Optimization
+
+The production build is already optimized by Vite:
+- Code splitting
+- Tree shaking
+- Minification
+- Asset optimization
+
+For further optimization:
+- Optimize images before adding to `public/` directory
+- Consider lazy loading for review images if the list grows large
+- Monitor bundle size with `npm run build` and check the output
+
+## Environment Variables
+
+Currently, no environment variables are required. All content is static and served from the `public/` directory.
+
+## Browser Support
+
+The site uses modern JavaScript features. Supported browsers:
+- Chrome/Edge (latest)
+- Firefox (latest)
+- Safari (latest)
+- Mobile browsers (iOS Safari, Chrome Mobile)

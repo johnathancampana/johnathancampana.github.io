@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Writing</title>
+  <style>
+    body { font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif; background: #fafbfc; color: #222; margin: 0; padding: 2rem; line-height: 1.7; }
+    .container { max-width: 600px; margin: 0 auto; }
+    a { color: #0070f3; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    #content h1 { font-size: 2rem; margin-top: 0; }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div id="content">Loading...</div>
+    <p><a href="/#writing">← Back to Writing</a></p>
+  </div>
+  <script>
+    // Set the markdown filename for this page
+    var markdownFile = 'tibet.md'; // Change this for each new piece
+    fetch(markdownFile)
+      .then(res => res.text())
+      .then(md => {
+        document.getElementById('content').innerHTML = marked.parse(md);
+        document.title = document.querySelector('#content h1')?.textContent || 'Writing';
+      });
+  </script>
+</body>
+</html> 

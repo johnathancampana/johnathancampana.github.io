@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Enabling Contextual Memory for the Amazon Pharmacy AI Assistant",
+    "slug": "pharmacy-ai",
+    "role": "Tech Lead",
+    "company": "Amazon Pharmacy",
+    "type": "GenAI / LLM Product Launch",
+    "skills": ["Python", "AWS Bedrock", "LangChain", "DynamoDB", "Prompt Engineering"],
+    "summary": "Led end-to-end development of multi-turn conversational memory for the Amazon Pharmacy AI Assistant, reducing human support contacts by 8%.",
+    "date": "2024-10-01"
+  },
+  {
+    "title": "Improving Price Visibility for Customers Facing 'Refill Too Soon' Rejections",
+    "slug": "price-visibility",
+    "role": "Product Manager",
+    "company": "Amazon Pharmacy",
+    "type": "UX Improvement",
+    "skills": ["Product Strategy", "Stakeholder Management", "Mentorship", "UX Design", "API Design"],
+    "summary": "Spearheaded a CX improvement from ideation to launch resulting in a 23% increase in price visibility. Built the API and CX foundation for decoupling insurance price from availability of that price.",
+    "date": "2024-09-06"
+  },
+  {
+    "title": "Launching PillPack on Amazon Pharmacy",
+    "slug": "pillpack",
+    "role": "Tech Lead",
+    "company": "Amazon Pharmacy",
+    "type": "Consumer Healthcare Product Launch",
+    "skills": ["Java", "API Design", "Stakeholder Management", "Influence Without Authority", "Project Management"],
+    "summary": "Contributed to the PillPack on Amazon Pharmacy MVP, then led the delivery of the GA launch which expanded access to Medicaid and Medicare customers.",
+    "date": "2025-04-01"
+  },
+  {
+    "title": "Building the 'Lean In' App from Scratch in Spain",
+    "slug": "lean-in",
+    "role": "Product Engineer",
+    "company": "Dribba",
+    "type": "Mobile App Development",
+    "skills": ["Flutter", "Dart", "Firebase", "API Design", "UX Design", "Stakeholder Management"],
+    "summary": "Collaborated with leaders from Dribba and the Lean In Foundation to create a mobile app companion for Lean In's conference.",
+    "date": "2019-11-19"
+  }
+]
+
+
