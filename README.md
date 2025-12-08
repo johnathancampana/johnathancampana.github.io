@@ -73,8 +73,10 @@ This site is configured for automated deployment to GitHub Pages using GitHub Ac
 1. **Enable GitHub Pages in repository settings:**
    - Go to your repository on GitHub
    - Navigate to **Settings** → **Pages**
-   - Under **Source**, select **GitHub Actions**
-   - Save the settings
+   - Under **Source**, select **Deploy from a branch**
+   - Select branch: **gh-pages** and folder: **/ (root)**
+   - Click **Save**
+   - **Note**: The workflow will automatically create the `gh-pages` branch on first run
 
 2. **Push to trigger deployment:**
    - The workflow (`.github/workflows/deploy.yml`) automatically runs on every push to `main` or `master` branch
@@ -89,10 +91,12 @@ This site is configured for automated deployment to GitHub Pages using GitHub Ac
 
 ### Troubleshooting GitHub Pages
 
-**Site not updating:**
-- Check the **Actions** tab for failed workflows
-- Ensure GitHub Pages is set to use **GitHub Actions** as the source (not a branch)
+**Site not updating / 404 errors:**
+- Check the **Actions** tab for failed workflows - look for any error messages
+- Ensure GitHub Pages is set to use **Deploy from a branch** with branch **gh-pages** and folder **/ (root)**
+- Verify the `gh-pages` branch exists and contains the `dist/` contents (check the branch in GitHub)
 - Wait a few minutes after deployment - GitHub Pages can take 1-2 minutes to update
+- If you see "There isn't a GitHub Pages site here", the `gh-pages` branch may not exist yet - trigger the workflow manually from the Actions tab
 
 **Build failures:**
 - Check the workflow logs in the **Actions** tab
