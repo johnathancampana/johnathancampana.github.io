@@ -83,6 +83,32 @@ This site is configured for automated deployment to GitHub Pages using GitHub Ac
    - After pushing, check the **Actions** tab to see the deployment progress
    - Once complete, your site will be available at `https://username.github.io` (or `https://username.github.io/repo-name` for project pages)
 
+### Custom Domain Setup
+
+This site is configured for the custom domain `johnathancampana.com`.
+
+1. **Configure DNS settings** with your domain provider:
+   - Add an **A record** pointing to GitHub's IP addresses:
+     - `185.199.108.153`
+     - `185.199.109.153`
+     - `185.199.110.153`
+     - `185.199.111.153`
+   - OR add a **CNAME record** pointing to `johnathancampana.github.io`
+   - **Note**: A records are recommended for apex domains (without www)
+
+2. **Enable custom domain in GitHub:**
+   - Go to **Settings** → **Pages**
+   - Under **Custom domain**, enter `johnathancampana.com`
+   - Check **Enforce HTTPS** (GitHub will provision an SSL certificate automatically)
+   - Save the settings
+
+3. **Wait for DNS propagation:**
+   - DNS changes can take up to 24-48 hours to propagate
+   - You can check propagation status using tools like `dig` or online DNS checkers
+   - Once propagated, your site will be available at `https://johnathancampana.com`
+
+**Note**: The `CNAME` file is automatically included in the build and deployed to the `gh-pages` branch.
+
 ### How It Works
 
 - **Automatic deployment**: Every push to `main`/`master` triggers a build and deployment

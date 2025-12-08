@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - master
-      - main
   workflow_dispatch:
 
 permissions:
@@ -34,4 +33,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
+          cname: johnathancampana.com
 
