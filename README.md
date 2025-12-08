@@ -54,16 +54,55 @@ npm run preview
 The `dist/` folder contains all static files needed to serve the site. You can deploy to any static hosting service:
 
 **Common hosting options:**
+- **GitHub Pages**: Automated deployment via GitHub Actions (see below)
 - **Vercel**: Connect your GitHub repo and deploy automatically
 - **Netlify**: Drag and drop the `dist/` folder or connect via Git
-- **GitHub Pages**: Push `dist/` contents to `gh-pages` branch
 - **AWS S3 + CloudFront**: Upload `dist/` to an S3 bucket and configure CloudFront
 - **Any static host**: Upload contents of `dist/` to your web server
 
 **Important deployment notes:**
-- Ensure your hosting service supports client-side routing (SPA mode)
-- For Vercel/Netlify, you may need a `_redirects` or `vercel.json` file to handle client-side routing
 - The site uses hash-based routing (`#about`, `#projects`, etc.), so no special server configuration is needed
+- For Vercel/Netlify, you may need a `_redirects` or `vercel.json` file to handle client-side routing (not needed for hash-based routing)
+
+## GitHub Pages Deployment
+
+This site is configured for automated deployment to GitHub Pages using GitHub Actions.
+
+### Initial Setup
+
+1. **Enable GitHub Pages in repository settings:**
+   - Go to your repository on GitHub
+   - Navigate to **Settings** → **Pages**
+   - Under **Source**, select **GitHub Actions**
+   - Save the settings
+
+2. **Push to trigger deployment:**
+   - The workflow (`.github/workflows/deploy.yml`) automatically runs on every push to `main` or `master` branch
+   - After pushing, check the **Actions** tab to see the deployment progress
+   - Once complete, your site will be available at `https://username.github.io` (or `https://username.github.io/repo-name` for project pages)
+
+### How It Works
+
+- **Automatic deployment**: Every push to `main`/`master` triggers a build and deployment
+- **Build process**: The workflow installs dependencies, builds the site with `npm run build`, and deploys the `dist/` folder
+- **Manual trigger**: You can also manually trigger deployment from the **Actions** tab using the "workflow_dispatch" option
+
+### Troubleshooting GitHub Pages
+
+**Site not updating:**
+- Check the **Actions** tab for failed workflows
+- Ensure GitHub Pages is set to use **GitHub Actions** as the source (not a branch)
+- Wait a few minutes after deployment - GitHub Pages can take 1-2 minutes to update
+
+**Build failures:**
+- Check the workflow logs in the **Actions** tab
+- Ensure `package.json` has all required dependencies
+- Verify Node.js version compatibility (workflow uses Node 20)
+
+**404 errors on content files:**
+- Verify that `public/` folder contents are being copied to `dist/` during build
+- Check that file paths in code match the production structure
+- Ensure `.nojekyll` file exists in `public/` (prevents Jekyll processing)
 
 ## Project Structure
 
@@ -94,7 +133,7 @@ personal-site/
 
 ### Updating Bio/About Section
 
-Edit `src/content/about.md` directly. Changes will appear immediately in development and after rebuilding for production.
+Edit `src/content/about.md` directly. For production builds, also ensure the file exists in `public/src/content/about.md` (files are automatically copied during setup). Changes will appear immediately in development and after rebuilding for production.
 
 ### Adding Projects
 
@@ -113,7 +152,7 @@ Edit `src/content/about.md` directly. Changes will appear immediately in develop
    - Copy `public/projects/template.html` → `public/projects/<slug>.html`
    - Update the `markdownFile` variable in the HTML to point to your `.md` file
 
-3. **Update intro** (optional): Edit `src/content/projects.md` to change the Projects section introduction
+3. **Update intro** (optional): Edit `src/content/projects.md` to change the Projects section introduction. For production, ensure it's also in `public/src/content/projects.md`.
 
 ### Adding Reviews
 
@@ -141,7 +180,7 @@ The Reviews tab will automatically show the new card with filters, rating stars,
    - Copy `public/writing/template.html` → `public/writing/<slug>.html`
    - Update the `markdownFile` variable to point to your new `.md` file
 
-3. **Add link**: Edit `src/content/writing.md` and add a link to `/writing/<slug>.html`
+3. **Add link**: Edit `src/content/writing.md` and add a link to `/writing/<slug>.html`. For production, ensure it's also in `public/src/content/writing.md`.
 
 ## Maintenance
 
