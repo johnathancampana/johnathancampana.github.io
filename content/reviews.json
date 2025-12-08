@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Slow Productivity",
+    "type": "book",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?auto=format&fit=crop&w=600&q=80",
+    "slug": "slow-productivity",
+    "blurb": "Cal Newport's case for embracing meaningful output over frantic busywork.",
+    "dateCompleted": "2025-01-12"
+  },
+  {
+    "title": "Dune: Part Two",
+    "type": "movie",
+    "rating": 4,
+    "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=600&q=80",
+    "slug": "dune-part-two",
+    "blurb": "A sweeping, moody continuation full of political intrigue and mythic scale.",
+    "dateCompleted": "2024-11-03"
+  },
+  {
+    "title": "The Timeless Way of Building",
+    "type": "article",
+    "rating": 4.2,
+    "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=600&q=80",
+    "slug": "timeless-way",
+    "blurb": "Christopher Alexander's essays on living architecture and pattern language.",
+    "dateCompleted": "2024-07-18"
+  }
+]
+
