@@ -66,9 +66,6 @@ function App() {
     fetch('/src/content/writing.md')
       .then(res => res.text())
       .then(setWriting);
-    fetch('/src/content/notes.md')
-      .then(res => res.text())
-      .then(setNotes);
     fetch('/content/reviews.json')
       .then(res => res.json())
       .then(setReviews);
