@@ -4,11 +4,11 @@ body {
   color: #222;
   margin: 0;
   padding: 0;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 .container {
-  max-width: 600px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 4rem 1.5rem 2rem 1.5rem;
   min-height: 100vh;
@@ -128,6 +128,83 @@ nav.slider-nav-bar {
   min-width: 0;
   box-sizing: border-box;
   padding: 0 0.5rem;
+}
+
+/* About section with 2-column layout */
+.about-section {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 3rem;
+  align-items: start;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+
+.about-content {
+  max-width: 650px;
+  line-height: 1.6;
+}
+
+.about-headshot {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.1);
+  object-fit: cover;
+  aspect-ratio: 3 / 4;
+}
+
+/* Markdown content styling */
+.slider-panel h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem 0;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+@media (min-width: 769px) {
+  .slider-panel h1 {
+    font-size: 2.5rem;
+  }
+}
+
+.slider-panel h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 2rem 0 1rem 0;
+  line-height: 1.3;
+}
+
+.slider-panel p {
+  max-width: 650px;
+  line-height: 1.6;
+  margin: 0 0 1.25rem 0;
+}
+
+.slider-panel ul,
+.slider-panel ol {
+  max-width: 650px;
+  line-height: 1.6;
+  margin: 0 0 1.25rem 0;
+  padding-left: 1.5rem;
+}
+
+.slider-panel li {
+  margin: 0.5rem 0;
+  line-height: 1.6;
+}
+
+.slider-panel a {
+  color: #0070f3;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.slider-panel a:hover {
+  color: #005bb5;
+  text-decoration: underline;
 }
 
 .intro {
@@ -415,4 +492,205 @@ footer {
 
 .star.filled {
   opacity: 1;
+}
+
+/* Mobile Responsive Styles */
+
+@media (max-width: 768px) {
+  /* Container and spacing */
+  .container {
+    padding: 2rem 1rem 1.5rem 1rem;
+  }
+
+  /* About section - stack on mobile */
+  .about-section {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .about-headshot {
+    max-width: 250px;
+    margin: 0 auto;
+  }
+
+  .slider-panel h1 {
+    font-size: 1.75rem;
+  }
+
+  header {
+    margin-bottom: 1.5rem;
+  }
+
+  /* Responsive typography */
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.05rem;
+  }
+
+  .intro {
+    font-size: 1rem;
+  }
+
+  /* Tab navigation - larger touch targets */
+  .slider-tab {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.95rem;
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .slider-content-outer {
+    margin-top: 1.5rem;
+  }
+
+  .slider-panel {
+    padding: 0;
+  }
+
+  /* Work grid - single column on mobile */
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Work controls - stack vertically on mobile */
+  .work-controls {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Reviews grid - 2 columns max on mobile */
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  /* Filter checkboxes - larger touch targets */
+  .filter-checkbox {
+    gap: 0.6rem;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    min-height: 44px;
+  }
+
+  .filter-checkbox input {
+    width: 1.25rem;
+    height: 1.25rem;
+    flex-shrink: 0;
+  }
+
+  /* Filter action buttons - larger touch targets */
+  .filter-actions button {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.9rem;
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Filter toggle button - larger touch target */
+  .filter-toggle button {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.9rem;
+    min-height: 44px;
+  }
+
+  /* Work card adjustments */
+  .work-card {
+    padding: 1rem;
+  }
+
+  .work-card-header h3 {
+    font-size: 1.05rem;
+  }
+
+  /* Review card - show overlay on touch */
+  .review-card:active .review-overlay,
+  .review-card.touch-active .review-overlay {
+    opacity: 1;
+  }
+
+  /* Contact links spacing */
+  .contact-links {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Extra small mobile adjustments */
+  .container {
+    padding: 1.5rem 0.75rem 1rem 0.75rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  /* Reviews grid - single column on very small screens */
+  .reviews-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Tab navigation - ensure it fits */
+  .slider-track {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .slider-tab {
+    padding: 0.65rem 1rem;
+    font-size: 0.9rem;
+    flex: 1;
+    text-align: center;
+  }
+
+  /* Review filters - better spacing */
+  .review-filters {
+    gap: 0.5rem 1rem;
+  }
+
+  /* Work filter options - better spacing */
+  .work-filter-options {
+    gap: 0.4rem 0.75rem;
+  }
+}
+
+/* Prevent horizontal overflow */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  /* Make review cards show overlay on tap */
+  .review-card {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .review-card:active {
+    transform: scale(0.98);
+  }
+
+  /* Improve button tap feedback */
+  button:active,
+  .slider-tab:active {
+    transform: scale(0.97);
+  }
+
+  /* Work card tap feedback */
+  .work-card:active {
+    transform: translateY(0);
+  }
 }

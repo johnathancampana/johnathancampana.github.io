@@ -170,7 +170,22 @@ function App() {
   });
 
   const getContent = () => [
-    <div className="slider-panel" key="about"><ReactMarkdown>{about}</ReactMarkdown></div>,
+    <div className="slider-panel" key="about">
+      <div className="about-section">
+        <div className="about-content">
+          <ReactMarkdown>{about}</ReactMarkdown>
+        </div>
+        <img 
+          src="/headshot.jpg" 
+          alt="Johnathan Campana" 
+          className="about-headshot"
+          onError={(e) => {
+            // Hide image if it doesn't exist
+            e.target.style.display = 'none';
+          }}
+        />
+      </div>
+    </div>,
     <div className="slider-panel" key="projects">
       {workIntro && (
         <div className="work-intro">
@@ -373,6 +388,43 @@ function App() {
       })}
     </div>
   );
+
+  // Handle touch interactions for review cards on mobile
+  useEffect(() => {
+    let cleanupFunctions = [];
+
+    // Use a small delay to ensure DOM is updated after reviews render
+    const timeoutId = setTimeout(() => {
+      const handleTouchStart = (e) => {
+        const card = e.currentTarget;
+        card.classList.add('touch-active');
+      };
+
+      const handleTouchEnd = (e) => {
+        const card = e.currentTarget;
+        // Remove class after a short delay to allow :active state to work
+        setTimeout(() => {
+          card.classList.remove('touch-active');
+        }, 300);
+      };
+
+      const reviewCards = document.querySelectorAll('.review-card');
+      reviewCards.forEach(card => {
+        card.addEventListener('touchstart', handleTouchStart, { passive: true });
+        card.addEventListener('touchend', handleTouchEnd, { passive: true });
+        cleanupFunctions.push(() => {
+          card.removeEventListener('touchstart', handleTouchStart);
+          card.removeEventListener('touchend', handleTouchEnd);
+        });
+      });
+    }, 100);
+
+    return () => {
+      clearTimeout(timeoutId);
+      cleanupFunctions.forEach(cleanup => cleanup());
+      cleanupFunctions = [];
+    };
+  }, [filteredReviews, selectedTab]);
 
   // Update hash when tab changes
   const handleTabClick = (key) => {
