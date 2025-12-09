@@ -1,4 +1,4 @@
-# Hi, I'm John.
+## Hi, I'm John.
 
 I live in Boston, where I'm currently studying at [Harvard Business School](https://www.hbs.edu) and exploring new opportunities to build and scale software businesses. 
 
