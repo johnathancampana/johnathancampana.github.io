@@ -5,7 +5,7 @@ import './App.css';
 const TABS = [
   { key: 'about', label: 'Bio' },
   { key: 'projects', label: 'Projects' },
-  { key: 'writing', label: 'Writing' },
+  // { key: 'writing', label: 'Writing' },
   // { key: 'reviews', label: 'Reviews' },
 ];
 
