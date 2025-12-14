@@ -174,7 +174,7 @@ function App() {
         </div>
         <img 
           src="/headshot.jpg" 
-          alt="Johnathan Campana" 
+          alt="headshot" 
           className="about-headshot"
           onError={(e) => {
             // Hide image if it doesn't exist
@@ -432,7 +432,7 @@ function App() {
   return (
     <main className="container">
       <header>
-        <h3>Johnathan Campana</h3>
+        <h3 style={{ textAlign: 'center' }}>Johnathan Campana</h3>
         <nav className="slider-nav-bar">
           <div className="slider-track">
             <div className="slider-thumb" style={thumbStyle}></div>
