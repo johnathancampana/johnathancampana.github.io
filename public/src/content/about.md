@@ -1,5 +1,5 @@
-Hi, I'm John. I live in Boston, where I'm currently studying at [Harvard Business School](https://www.hbs.edu). I'm interested in acquisitions and operations of smaller businesses.
+Hi, I'm John. I live in Boston, where I'm currently studying at [Harvard Business School](https://www.hbs.edu). I'm interested in the acquisition and operations of smaller software and B2B services businesses.
 
-Before HBS, I built software to show customers their prescription drug prices at [Amazon Pharmacy](https://pharmacy.amazon.com), built systems to transform satellite capacity data at [Viasat](https://www.viasat.com), and studied Computer Science at [UMass Amherst](https://www.cics.umass.edu).
+Prior to HBS, I spent my early career scaling growth-stage technology products. At [Amazon Pharmacy](https://pharmacy.amazon.com), I led technical teams that built software to show customers their prescription drug prices and created applied AI systems to automate customer support. Before that, I built  data infrastructure to manage satellite capacity at [Viasat](https://www.viasat.com), and studied Computer Science at [UMass Amherst](https://www.cics.umass.edu).
 
 Please feel free to message me on [LinkedIn](https://www.linkedin.com/in/johnathan-campana/) or send me an [email](mailto:johnathanrcampana@gmail.com).
